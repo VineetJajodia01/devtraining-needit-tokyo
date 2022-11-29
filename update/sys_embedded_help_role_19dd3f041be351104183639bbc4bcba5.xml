@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_58872_needit.needit_admin_page" name="x_58872_needit.needit_admin_page">27bd7f4c1b2751104183639bbc4bcbeb</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>vineet.jajodia</sys_created_by>
+        <sys_created_on>2022-11-29 10:02:59</sys_created_on>
+        <sys_id>19dd3f041be351104183639bbc4bcba5</sys_id>
+        <sys_name>27bd7f4c1b2751104183639bbc4bcbeb</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_embedded_help_role_19dd3f041be351104183639bbc4bcba5</sys_update_name>
+    </sys_embedded_help_role>
+</record_update>
