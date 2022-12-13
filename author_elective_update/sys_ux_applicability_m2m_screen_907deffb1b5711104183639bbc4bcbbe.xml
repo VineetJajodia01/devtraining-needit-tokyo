@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen">
+    <sys_ux_applicability_m2m_screen action="DELETE">
+        <active>true</active>
+        <applicability display_value="NeedIt Admins">282da33f1b5711104183639bbc4bcbba</applicability>
+        <order>100</order>
+        <screen display_value="Home default">ce5e81531b1bd1104183639bbc4bcb6c</screen>
+        <sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name>
+        <sys_created_by>vineet.jajodia</sys_created_by>
+        <sys_created_on>2022-11-28 14:12:55</sys_created_on>
+        <sys_id>907deffb1b5711104183639bbc4bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_screen_907deffb1b5711104183639bbc4bcbbe</sys_update_name>
+        <sys_updated_by>vineet.jajodia</sys_updated_by>
+        <sys_updated_on>2022-11-28 14:12:55</sys_updated_on>
+    </sys_ux_applicability_m2m_screen>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>0689c7e1db5cf3000b9d21c4059619e7</instance_id>
+        <instance_name>dev76178</instance_name>
+        <name>sys_ux_applicability_m2m_screen_907deffb1b5711104183639bbc4bcbbe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen"><sys_ux_applicability_m2m_screen action="INSERT_OR_UPDATE"><active>true</active><applicability display_value="NeedIt Admins">282da33f1b5711104183639bbc4bcbba</applicability><order>100</order><screen display_value="Home default">ce5e81531b1bd1104183639bbc4bcb6c</screen><sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name><sys_created_by>vineet.jajodia</sys_created_by><sys_created_on>2022-11-28 14:12:55</sys_created_on><sys_id>907deffb1b5711104183639bbc4bcbbe</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>sys_ux_applicability_m2m_screen_907deffb1b5711104183639bbc4bcbbe</sys_update_name><sys_updated_by>vineet.jajodia</sys_updated_by><sys_updated_on>2022-11-28 14:12:55</sys_updated_on></sys_ux_applicability_m2m_screen></record_update>]]></payload>
+        <payload_hash>1324481492</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>c32ff8d71bd7d1104183639bbc4bcbc5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>vineet.jajodia</sys_created_by>
+        <sys_created_on>2022-11-28 14:12:55</sys_created_on>
+        <sys_id>d87deffb1b5711104183639bbc4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184be956ebb0000001</sys_recorded_at>
+        <sys_updated_by>vineet.jajodia</sys_updated_by>
+        <sys_updated_on>2022-11-28 14:12:55</sys_updated_on>
+        <type>Screen Applicability</type>
+        <update_guid>147deffb72571110ffe4d74fa5109ac0</update_guid>
+        <update_guid_history>147deffb72571110ffe4d74fa5109ac0:1324481492</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>vineet.jajodia</sys_created_by>
+        <sys_created_on>2022-11-28 14:42:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_applicability_m2m_screen">sys_ux_applicability_m2m_screen</sys_db_object>
+        <sys_id>5c9519dafdea4fe9b9fd8b3cbf65a491</sys_id>
+        <sys_metadata>907deffb1b5711104183639bbc4bcbbe</sys_metadata>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_ux_applicability_m2m_screen_907deffb1b5711104183639bbc4bcbbe</sys_update_name>
+        <sys_update_version display_value="sys_ux_applicability_m2m_screen_907deffb1b5711104183639bbc4bcbbe">d87deffb1b5711104183639bbc4bcbc0</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
