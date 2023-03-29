@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_58872_needit/needit_api/nigetinfo/{user_name}</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>ni_getinfo</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	// implement resource here
+
+	// Get query param
+	var reqQuery = request.queryParams.ni_query;
+	// Get path param
+	var reqUserName = request.pathParams.user_name;
+
+	var grUser = new GlideRecord('sys_user');
+	grUser.get('user_name',reqUserName);
+	//if(grUser.next()){
+	var gaNI = new GlideAggregate('x_58872_needit_needit');
+	gaNI.addAggregate('COUNT');
+	gaNI.addQuery('u_requested_for',grUser.getUniqueValue());
+	gaNI.addEncodedQuery(reqQuery);
+	gaNI.groupBy('u_request_type');
+	gaNI.query();
+
+	var netNIRec = 0;
+	var niRec = 0;
+	var niUserRec = [];
+
+	while(gaNI.next()){
+		niRec = gaNI.getAggregate('COUNT');
+		niUserRec.push({
+			requestType : gaNI.u_request_type.getDisplayValue(),
+			count : niRec
+		});
+		netNIRec = parseInt(netNIRec) + parseInt(niRec);
+	}
+	//}
+
+	var body = {};
+	body.netUserNeedItRec = netNIRec;
+	body.categoryCount = niUserRec;
+	body.user = {
+		"userName" : reqUserName,
+		"id" : grUser.getUniqueValue()
+	};
+
+	response.setBody(body);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_58872_needit/v1/needit_api/nigetinfo/{user_name}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/nigetinfo/{user_name}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>Find the active NeedIt records for a user. Group by What needed.</short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>vineet.jajodia</sys_created_by>
+        <sys_created_on>2023-03-28 07:44:57</sys_created_on>
+        <sys_id>3933986a1b7161109301ff37dc4bcb3d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ni_getinfo</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ws_operation_3933986a1b7161109301ff37dc4bcb3d</sys_update_name>
+        <sys_updated_by>vineet.jajodia</sys_updated_by>
+        <sys_updated_on>2023-03-28 11:57:52</sys_updated_on>
+        <web_service_definition display_value="NeedIt API">58b1502a1b7161109301ff37dc4bcb00</web_service_definition>
+        <web_service_version display_value="v1">2c5dc1ee1b3561109301ff37dc4bcbc8</web_service_version>
+    </sys_ws_operation>
+</record_update>
